@@ -14,24 +14,24 @@
   --primary-300: #938dff;
   --primary-400: #7b74ff;
   /* main */
-  --primary-500: #645cff;
-  --primary-600: #554ed9;
-  --primary-700: #4640b3;
+  --primary-500: #4f46e5;  /* New main color - Indigo */
+  --primary-600: #4338ca;
+  --primary-700: #3730a3;
   --primary-800: #37338c;
   --primary-900: #282566;
   --primary-1000: #191740;
   --primary-1100: #0a0919;
   /* grey */
   --grey-0: #fafbfc;
-  --grey-50: #f2f4f8;
-  --grey-100: #eaedf3;
+  --grey-50: #f9fafb;
+  --grey-100: #f3f4f6;
   --grey-200: #e2e7ef;
   --grey-300: #dbe0ea;
   --grey-400: #d3dae6;
   --grey-500: #cbd3e1;
   --grey-600: #adb3bf;
   --grey-700: #8e949e;
-  --grey-800: #70747c;
+  --grey-800: #1f2937;
   --grey-900: #51545a;
   --grey-1000: #333538;
   --grey-1100: #141516;
@@ -39,21 +39,21 @@
   /* rest */
   --black: #222;
   --white: #fff;
-  --red-light: #f8d7da;
-  --red-dark: #842029;
-  --green-light: #d1e7dd;
-  --green-dark: #0f5132;
+  --red-light: #fef2f2;
+  --red-dark: #dc2626;
+  --green-light: #ecfdf5;
+  --green-dark: #059669;
 
   /* typography */
-  --headingFont: 'Inconsolata', monospace;
-  --bodyFont: 'Montserrat', sans-serif;
+  --headingFont: 'Inter', sans-serif;
+  --bodyFont: 'Inter', sans-serif;
   --smallText: 0.7em;
   /* rest */
   --backgroundColor: var(--grey-50);
   --textColor: var(--grey-1000);
-  --borderRadius: 0.25rem;
+  --borderRadius: 0.5rem;
   --letterSpacing: 1px;
-  --transition: 0.3s ease-in-out all;
+  --transition: 0.2s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
   /* box shadows */
@@ -141,16 +141,18 @@ a {
   border: none;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
-  padding: 0.375rem 0.75rem;
+  padding: 0.625rem 1.25rem;
   box-shadow: var(--shadow-1);
-  transition: var(--transition);
+  transition: all 0.2s;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 .btn:hover {
   color: var(--white);
   background: var(--primary-700);
   box-shadow: var(--shadow-2);
+  transform: translateY(-1px);
 }
 button.small {
   padding: 0.25rem 0.5rem;
@@ -175,9 +177,9 @@ button.block {
 form {
   width: 100%;
   background: var(--white);
-  border-radius: var(--borderRadius);
-  box-shadow: var(--shadow-2);
-  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 2.5rem;
 }
 label {
   display: block;
@@ -189,11 +191,18 @@ label {
 input,
 textarea {
   width: 100%;
-  padding: 0.375rem 0.75rem;
-  border-radius: var(--borderRadius);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
   background: var(--grey-50);
   border-color: transparent;
   border: 1px solid var(--grey-300);
+  transition: border-color 0.2s;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 .form-row {
   margin-bottom: 1rem;
@@ -341,17 +350,19 @@ form > :last-child {
   gap: 1rem;
 }
 .single-task {
-  padding: 1rem 2.5rem;
+  padding: 1.25rem;
   background: var(--white);
-  border-radius: var(--borderRadius);
+  border-radius: 0.75rem;
   box-shadow: var(--shadow-2);
-  transition: var(--transition);
+  transition: all 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid var(--grey-100);
 }
 .single-task:hover {
   box-shadow: var(--shadow-4);
+  transform: translateY(-2px);
 }
 .single-task h5 {
   margin-bottom: 0;
@@ -409,7 +420,6 @@ form > :last-child {
   margin-bottom: 0;
   margin-top: 0;
 }
-
 .single-task-form .form-control {
   display: grid;
   grid-template-columns: 150px 1fr;
