@@ -12,6 +12,14 @@ A REST API for managing tasks built with Node.js, Express and MongoDB.
 
 The server will run on port 5000 by default.
 
+## Screenshots
+
+### Main Screen
+![image_alt](https://github.com/VedantS28/TaskManager-HTML-CSS-NodeJS/blob/0daf1a0d1147a17631f982d20b18e9afbfd8c3c9/screenshots/task_manager.png?raw=true)
+
+### Edit Task
+![image_alt](https://github.com/VedantS28/TaskManager-HTML-CSS-NodeJS/blob/main/screenshots/edit_task.png?raw=true)
+
 # API Documentation
 
 ## Endpoints
