@@ -12,14 +12,41 @@ A REST API for managing tasks built with Node.js, Express and MongoDB.
 
 The server will run on port 5000 by default.
 
-## API Endpoints
+# API Documentation
+
+## Endpoints
+
 ### Tasks
 
-GET /api/v1/tasks - Get all tasks
-POST /api/v1/tasks - Create a new task
-GET /api/v1/tasks/:id - Get a single task
-PATCH /api/v1/tasks/:id - Update a task
-DELETE /api/v1/tasks/:id - Delete a task
+#### Get All Tasks
+```http
+GET /api/v1/tasks
+```
+Returns a list of all tasks.
+
+#### Create Task
+```http
+POST /api/v1/tasks
+```
+Creates a new task.
+
+#### Get Single Task
+```http
+GET /api/v1/tasks/:id
+```
+Returns a specific task by ID.
+
+#### Update Task
+```http
+PATCH /api/v1/tasks/:id
+```
+Updates an existing task.
+
+#### Delete Task
+```http
+DELETE /api/v1/tasks/:id
+```
+Deletes a task.
 
 ## Request Body Format
 
